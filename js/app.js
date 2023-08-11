@@ -56,7 +56,7 @@
                 const breakpoints = initBreakpoints();
                 let mdQuery = iconMenu.dataset.menu;
                 mdQuery in breakpoints ? mdQuery = convertTo("em", breakpoints[mdQuery]) : mdQuery = convertTo("em", mdQuery);
-                mdQuery = "(max" + "-width: " + mdQuery + ")";
+                mdQuery = "(max-width: " + mdQuery + ")";
                 const matchMedia = window.matchMedia(mdQuery);
                 matchMedia.addEventListener("change", closeOnBp);
                 fontSizeListener(closeOnBp);
